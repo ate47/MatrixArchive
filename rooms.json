@@ -1,0 +1,7 @@
+[
+  {
+    "rid": "roomId",
+    "u": "roomUserId",
+    "p": "roomPassword"
+  }
+]
