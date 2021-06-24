@@ -187,7 +187,7 @@ function Read-Room ($r) {
 Write-Host "Reading rooms..." -ForegroundColor Cyan
 $rooms = Get-Content -Encoding utf8 $RoomsFile | ConvertFrom-Json
 
-New-Item -Name "output" -ItemType Directory -Force
+New-Item -Name "output" -ItemType Directory -Force > $null
 for ($i = 0; $i -lt $rooms.Count; $i++) {
 	$r = $rooms[$i]
 	Write-Progress -Activity "Reading $($rooms.Count) rooms" -Status ($r.rid) -PercentComplete ($i * 100 / $rooms.Count)
